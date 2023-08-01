@@ -1,10 +1,10 @@
-from flask import Flask 
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def hellow_world():
-  return "Hellow World"
+  return render_template('home.html')
 
 print(__name__)
 if __name__ == "__main__":
