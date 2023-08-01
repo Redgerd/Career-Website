@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -19,6 +19,11 @@ JOBS = [
   'Salary' : 'Rs. 15,000,000'
   }
 ]
+
+@app.route("/jobs")
+def list_jobs():
+  return jsonify(JOBS)
+
 @app.route("/")
 def hellow_redgerd():
   return render_template('home.html',jobs=JOBS,company_name='Redgerd')
