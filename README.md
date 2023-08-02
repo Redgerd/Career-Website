@@ -1,2 +1,2 @@
 # Career-Website
-A general career website
+Frontend of a general career website
